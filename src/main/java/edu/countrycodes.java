@@ -1,4 +1,4 @@
-package hw;
+package Main;
 import java.util.*;
 import org.jgrapht.*;
 import org.jgrapht.alg.color.GreedyColoring;
