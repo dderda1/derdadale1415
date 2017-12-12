@@ -72,7 +72,8 @@ public class Main {
       final String country = rwi1.next();
       System.out.println(" RWI search starting with Czechy: " + country);
     }
-    GreedyColoring color = new GreedyColoring(myMap);
+    GreedyColoring colors = new GreedyColoring(map);
+    System.out.println(colors.getColoring());
   }
 }
   
