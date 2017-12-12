@@ -1,4 +1,4 @@
-package Main;
+package hw;
 import java.util.*;
 import org.jgrapht.*;
 import org.jgrapht.alg.color.GreedyColoring;
@@ -42,12 +42,12 @@ public class Main {
       final String country = bf1.next();
       System.out.println(" BF search starting with Czechy: " + country);
     }
-    final Iterator<String> cf = new ClosesthFirstIterator<>(map, PL);
+    final Iterator<String> cf = new ClosestFirstIterator<>(map, PL);
     while (cf.hasNext()){
       final String country = cf.next();
       System.out.println(" CF search starting with Polska: " + country);
     }
-    final Iterator<String> cf1 = new ClosesthFirstIterator<>(map, CZ);
+    final Iterator<String> cf1 = new ClosestFirstIterator<>(map, CZ);
     while (cf1.hasNext()){
       final String country = cf1.next();
       System.out.println(" CF search starting with Czechy: " + country);
