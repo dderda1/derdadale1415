@@ -34,22 +34,22 @@ public class Main {
     System.out.println(map);
     final Iterator<String> bf = new BreadthFirstIterator<>(map, PL);
     while (bf.hasNext()){
-      final String country = br.next();
+      final String country = bf.next();
       System.out.println(" BF search starting with Polska: " + country);
     }
     final Iterator<String> bf1 = new BreadthFirstIterator<>(map, CZ);
     while (bf1.hasNext()){
-      final String country = br.next();
+      final String country = bf1.next();
       System.out.println(" BF search starting with Czechy: " + country);
     }
     final Iterator<String> cf = new ClosesthFirstIterator<>(map, PL);
     while (cf.hasNext()){
-      final String country = cr.next();
+      final String country = cf.next();
       System.out.println(" CF search starting with Polska: " + country);
     }
     final Iterator<String> cf1 = new ClosesthFirstIterator<>(map, CZ);
     while (cf1.hasNext()){
-      final String country = cr1.next();
+      final String country = cf1.next();
       System.out.println(" CF search starting with Czechy: " + country);
     }
   }
