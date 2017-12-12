@@ -52,6 +52,27 @@ public class Main {
       final String country = cf1.next();
       System.out.println(" CF search starting with Czechy: " + country);
     }
+    final Iterator<String> df = new DepthFirstIterator<>(map, PL);
+    while (df.hasNext()){
+      final String country = df.next();
+      System.out.println(" DF search starting with Polska: " + country);
+    }
+    final Iterator<String> df1 = new DepthFirstIterator<>(map, CZ);
+    while (df1.hasNext()){
+      final String country = df1.next();
+      System.out.println(" DF search starting with Czechy: " + country);
+    }
+    final Iterator<String> rwi = new RandomWalkIterator<>(map, PL, false, 10);
+    while (rwi.hasNext()){
+      final String country = rwi.next();
+      System.out.println(" RWI search starting with Polska: " + country);
+    }
+    final Iterator<String> rwi1 = new RandomWalkIterator<>(map, CZ, false, 10);
+    while (rwi1.hasNext()){
+      final String country = rwi1.next();
+      System.out.println(" RWI search starting with Czechy: " + country);
+    }
+    GreedyColoring color = new GreedyColoring(myMap);
   }
 }
   
