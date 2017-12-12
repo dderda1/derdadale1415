@@ -16,4 +16,23 @@ public class Main {
   
   public static void main(final String[] args) {
     final Graph<String, DefaultEdge> map = new SimpleGraph<>(DefaultEdge.class);
+    map.addVertex(PL);
+    map.addVertex(DE);
+    map.addVertex(CZ);
+    map.addVertex(SK);
+    map.addVertex(UA);
+    map.addVertex(BY);
+    map.addEdge(PL, DE);
+    map.addEdge(PL, CZ);
+    map.addEdge(PL, SK);
+    map.addEdge(PL, UA);
+    map.addEdge(PL, BY);
+    map.addEdge(DE, CZ);
+    map.addEdge(CZ, SK);
+    map.addEdge(SK, UA);
+    map.addEdge(UA, BY);
+    System.out.println(map);
+    
+  }
+}
   
