@@ -43,6 +43,4 @@ run {
     standardOutput = System.out
 }
 
-googleJavaFormat {
-    toolVersion = '1.4'
-}
+
