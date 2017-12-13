@@ -1,4 +1,5 @@
 package hw;
+
 import java.util.*;
 import org.jgrapht.*;
 import org.jgrapht.alg.color.GreedyColoring;
@@ -13,7 +14,7 @@ public class Main {
   static final String SK = countrycodes.SK;
   static final String UA = countrycodes.UA;
   static final String BY = countrycodes.BY;
-  
+
   public static void main(final String[] args) {
     final Graph<String, DefaultEdge> map = new SimpleGraph<>(DefaultEdge.class);
     map.addVertex(PL);
@@ -33,42 +34,42 @@ public class Main {
     map.addEdge(UA, BY);
     System.out.println(map);
     final Iterator<String> bf = new BreadthFirstIterator<>(map, PL);
-    while (bf.hasNext()){
+    while (bf.hasNext()) {
       final String country = bf.next();
       System.out.println(" BF search starting with Polska: " + country);
     }
     final Iterator<String> bf1 = new BreadthFirstIterator<>(map, CZ);
-    while (bf1.hasNext()){
+    while (bf1.hasNext()) {
       final String country = bf1.next();
       System.out.println(" BF search starting with Czechy: " + country);
     }
     final Iterator<String> cf = new ClosestFirstIterator<>(map, PL);
-    while (cf.hasNext()){
+    while (cf.hasNext()) {
       final String country = cf.next();
       System.out.println(" CF search starting with Polska: " + country);
     }
     final Iterator<String> cf1 = new ClosestFirstIterator<>(map, CZ);
-    while (cf1.hasNext()){
+    while (cf1.hasNext()) {
       final String country = cf1.next();
       System.out.println(" CF search starting with Czechy: " + country);
     }
     final Iterator<String> df = new DepthFirstIterator<>(map, PL);
-    while (df.hasNext()){
+    while (df.hasNext()) {
       final String country = df.next();
       System.out.println(" DF search starting with Polska: " + country);
     }
     final Iterator<String> df1 = new DepthFirstIterator<>(map, CZ);
-    while (df1.hasNext()){
+    while (df1.hasNext()) {
       final String country = df1.next();
       System.out.println(" DF search starting with Czechy: " + country);
     }
     final Iterator<String> rwi = new RandomWalkIterator<>(map, PL, false, 10);
-    while (rwi.hasNext()){
+    while (rwi.hasNext()) {
       final String country = rwi.next();
       System.out.println(" RWI search starting with Polska: " + country);
     }
     final Iterator<String> rwi1 = new RandomWalkIterator<>(map, CZ, false, 10);
-    while (rwi1.hasNext()){
+    while (rwi1.hasNext()) {
       final String country = rwi1.next();
       System.out.println(" RWI search starting with Czechy: " + country);
     }
@@ -76,4 +77,3 @@ public class Main {
     System.out.println(colors.getColoring());
   }
 }
-  
